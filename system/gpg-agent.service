@@ -1,0 +1,10 @@
+[Unit]
+Description=GPG Agent Daemon
+
+[Service]
+ExecStart=/usr/bin/gpg-agent --daemon --no-detach --write-env-file "${HOME}/.gpg-agent-info"
+ExecReload=/bin/kill -HUP $MAINPID
+Type=forking
+
+[Install]
+WantedBy=default.target
