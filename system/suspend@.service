@@ -7,7 +7,7 @@ User=%I
 Type=forking
 Environment=DISPLAY=:0
 ExecStartPre= 
-ExecStart=/etc/systemd/custom-scripts/set-hrparm.sh ; /usr/bin/i3lock
+ExecStart=/usr/bin/i3lock
 
 [Install]
 WantedBy=sleep.target
