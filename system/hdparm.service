@@ -1,0 +1,11 @@
+#Note this is the same as root-resume, but wantedby did not support two arguments.
+[Unit]
+Description=Local system resume actions
+After=suspend.target
+
+[Service]
+Type=simple
+ExecStart=/etc/systemd/custom-scripts/set-hdparm.sh
+
+[Install]
+WantedBy=multi-user.target 
